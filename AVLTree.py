@@ -1,11 +1,3 @@
-#id1: 322612581
-#name1: Liel Weinfeld
-#username1: Lielweinfeld
-#id2: 211465083
-#name2: Aviv Noah
-#username2: avivnoah
-
-
 """A class represnting a node in an AVL tree"""
 
 
