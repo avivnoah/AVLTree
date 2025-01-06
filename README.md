@@ -1,31 +1,31 @@
-# AVLTree
-AVL Trees Project
-
-Implementing an AVL tree, a self-balancing binary search tree, using rotation methods and maintaining the balance factor of each node. Motivation: To reduce the worst-case time complexity for search, insert, and delete operations to O(log n).
+# AVL Tree Project
+- A self-balancing binary search tree
+- used rotations to maintain the balance factor of each node.
+- Motivation: reduce the worst-case time complexity for search, insert, and delete operations to O(log n).
 ![354638835-9e4ac839-499b-4deb-8786-12c183aa1fb0](https://github.com/user-attachments/assets/0982bc20-acd4-44a4-9a46-5ecddfda3134)
 ![354635585-e3b975e9-d8ae-4f0a-911b-a26eb050e98b](https://github.com/user-attachments/assets/fb3ddbe0-2512-4aff-ba82-6f38c2a3b211)
+## Methods Description:
 
-Methods:
-
+```bash
 class Node:
     def __init__(self, key, value):
-      """
-      Fields:
-          'key': int
-          'value': string
-          'parent': AVLNode instance
-          'left': AVLNode instance
-          'right': AVLNode instance
-          'height': int
-      Output:
-          -
-      Description:
-          Constructor for AVLNode. if empty, height is -
-      Time Complexity:
-          Overall O(1), as all methods are constant.
-      """
+        """
+        Fields:
+            'key': int
+            'value': string
+            'parent': AVLNode instance
+            'left': AVLNode instance
+            'right': AVLNode instance
+            'height': int
+        Output:
+            -
+        Description:
+            Constructor for AVLNode. if empty, height is -
+        Time Complexity:
+            Overall O(1), as all methods are constant.
+        """
     
-  def get_parent(self):
+    def get_parent(self):
     """
 		  Input:
 			  self - a node
@@ -37,7 +37,7 @@ class Node:
 			  Overall O(1), as all methods are constant.
 		"""
   
-  def get_height(self):
+    def get_height(self):
     """
   		Input:
   			self - a node
@@ -48,7 +48,7 @@ class Node:
   		Time Complexity:
   			Overall O(1), as all methods are constant.
 		"""
-  def is_real_node(self):
+    def is_real_node(self):
 		"""
 		Input:
 			self - a node
@@ -60,7 +60,7 @@ class Node:
 		 	Overall O(1), as all methods are constant.
 		"""
     
-  def find_height(self):
+    def find_height(self):
 		"""
 		Input:
 			self - a node
@@ -72,7 +72,7 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def update_height(self):
+    def update_height(self):
 		"""
 		Input:
 			self - a node
@@ -83,7 +83,7 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def successor(self):
+    def successor(self):
 		"""
 		Input:
 			self - a node
@@ -103,7 +103,7 @@ class Node:
 			Thus,overall the time complexity of this method is O(log n).
 		"""
     
-  def update_parent(self, up_parent):
+    def update_parent(self, up_parent):
 		"""
 		Input:
 			self - a node and up_parent which is the node to be updated as parent of self
@@ -114,7 +114,7 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def update_left_child(self, up_left):
+    def update_left_child(self, up_left):
 		"""
 		Input:
 			self - a node and up_left which is the node to be updated as left child of self
@@ -125,7 +125,7 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def update_right_child(self, up_right):
+    def update_right_child(self, up_right):
 		"""
 		Input:
 			self - a node and up_right which is the node to be updated as right child of self.
@@ -137,7 +137,7 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def is_leaf(self):
+    def is_leaf(self):
 		"""
 		Input:
 			self - a node
@@ -149,7 +149,7 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def is_root(self):
+    def is_root(self):
 		"""
 		Input:
 			self - a node
@@ -161,7 +161,7 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def has_only_left_child(self):
+    def has_only_left_child(self):
 		"""
 		Input:
 			self - a node
@@ -173,7 +173,7 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def has_only_right_child(self):
+    def has_only_right_child(self):
 		"""
 		Input:
 			'self': AVLNode instance
@@ -185,26 +185,26 @@ class Node:
 			Overall O(1), as all methods are constant.
 		"""
     
-  def node_type(self):
+    def node_type(self):
 		"""
-    Input:
-        'self': AVLNode instance
-    Output:
-        @type: string
-        returns the 'type' of a given root
-    Description:
-        types:
-          "leaf" - the node is a leaf
-          "virtual node" - the node is a virtual node
-          "unary left" - the node is a unary left node(has only left child)
-          "unary right" - the node is a unary right node(has only right child)
-          "root" - the node is a root
-          "just a node" - an ordinary two-child node
-    Time Complexity:
-        Overall O(1), as all methods are constant.
-    """
+        Input:
+            'self': AVLNode instance
+        Output:
+            @type: string
+            returns the 'type' of a given root
+        Description:
+            types:
+            "leaf" - the node is a leaf
+            "virtual node" - the node is a virtual node
+            "unary left" - the node is a unary left node(has only left child)
+            "unary right" - the node is a unary right node(has only right child)
+            "root" - the node is a root
+            "just a node" - an ordinary two-child node
+        Time Complexity:
+            Overall O(1), as all methods are constant.
+        """
     
-  def get_balance_factor(self):
+    def get_balance_factor(self):
 		"""
         Input:
             'self': AVLNode instance
@@ -219,14 +219,14 @@ class Node:
 
     
 class AVLTree(object):
-  def __init__(self, root: AVLNode = AVLNode.virtual_node, max_tree_node: AVLNode = AVLNode.virtual_node,
+    def __init__(self, root: AVLNode = AVLNode.virtual_node, max_tree_node: AVLNode = AVLNode.virtual_node,
 				 size: int = 0):
         """
         Constructor method that builds an AVL tree with the given root. 
         If the root is virtual or empty, it will be defined as empty.
         """
 
-  def convert_tree(self, tree):
+    def convert_tree(self, tree):
 		"""
         Input:
             'self': AVLTree instance
@@ -240,7 +240,7 @@ class AVLTree(object):
             Overall O(1), as all methods are constant, only compares two given nodes.
     """
 
-  def update_max_node(self, node: AVLNode):
+    def update_max_node(self, node: AVLNode):
 		"""
         Input:
             'self': AVLTree instance
@@ -254,7 +254,7 @@ class AVLTree(object):
             Overall O(1), as all methods are constant, only compares two given nodes.
         """
 
-  def fix_root(self):
+    def fix_root(self):
 		"""
         Input:
             -
@@ -280,7 +280,7 @@ class AVLTree(object):
             Overall O(1), as all methods are constant.
         """
 
-  def rearrange_parent(self, node, child):
+    def rearrange_parent(self, node, child):
 		"""
 		Input:
 			'self': AVLTree instance
@@ -295,7 +295,7 @@ class AVLTree(object):
 			Overall O(1), as all methods are constant.
 		"""
 
-  def left_rotation(self, node: AVLNode):
+    def left_rotation(self, node: AVLNode):
 		"""
 		Input:
 			'self': AVLTree instance
@@ -308,7 +308,7 @@ class AVLTree(object):
 			Overall O(1), as all methods are constant.
 		"""
 
-  def right_rotation(self, node: AVLNode):
+    def right_rotation(self, node: AVLNode):
 		"""
 		Input:
 			'self': AVLTree instance
@@ -321,7 +321,7 @@ class AVLTree(object):
 			Overall O(1), as all methods are constant.
 		"""
 
-  def rebalance_rotation(self, node: AVLNode):
+    def rebalance_rotation(self, node: AVLNode):
 		"""
 		Input:
 			'self': AVLTree instance
@@ -336,7 +336,7 @@ class AVLTree(object):
 			Overall O(1), as all methods are constant.
 		"""
 
-  def search(self, key):
+    def search(self, key):
 		"""
 		Input:
 			'self': AVLTree instance
@@ -350,7 +350,7 @@ class AVLTree(object):
 			Overall O(log n) at worst case(as seen in class), potentially faster if the finger is near insertion spot.
 		"""
   
-  def finger_search(self, key):
+    def finger_search(self, key):
 		"""
 		Input:
 			'self': AVLTree instance
@@ -364,7 +364,7 @@ class AVLTree(object):
 			Overall O(log i) at worst case(as seen in class), potentially faster if the finger is near insertion spot.
 		"""
 
-  def insert(self, key, val=""):
+    def insert(self, key, val=""):
 		"""
 		Input:
 			'self': AVLTree instance
@@ -380,7 +380,7 @@ class AVLTree(object):
 			Overall O(log n) in the worst case, potentially faster if the finger is near the insertion spot.
 		"""
   
-  def insertion_rebalance(self, node: AVLNode):
+    def insertion_rebalance(self, node: AVLNode):
 		"""
 		Input:
 			'self': AVLTree instace
@@ -397,7 +397,7 @@ class AVLTree(object):
 			Overall O(log n) - we ascend to the root at most O(log n) steps.
 		"""
   
-  def finger_insert(self, key=None, val=None):
+    def finger_insert(self, key=None, val=None):
 		"""
 		Input:
 			'self': AVLTree instance
@@ -413,7 +413,7 @@ class AVLTree(object):
 			Overall O(log n) in the worst case, potentially faster if the finger is near the insertion spot.
 		"""
 
-  def find_max(self):
+    def find_max(self):
 		"""
 		Input:
 			'self': AVLTree instace
@@ -427,7 +427,7 @@ class AVLTree(object):
 			Overall O(log n) in a balanced AVL, as studied in class.
 		"""
   
-  def bst_deletion(self, node: AVLNode):
+    def bst_deletion(self, node: AVLNode):
 		"""
 		Input:
 			'self': AVLTree instace
@@ -446,7 +446,7 @@ class AVLTree(object):
 			Overall Finding the successor is O(log n).
 		"""
   
-  def delete(self, node: AVLNode):
+    def delete(self, node: AVLNode):
 		"""
 		Input:
 			The method receives tree2 whose keys are either smaller or larger, collectively, than
@@ -465,7 +465,7 @@ class AVLTree(object):
 			O(log n) - removal is O(log n) plus rebalancing up the tree at most O(log n) steps.
 		"""
   
-  def rebalace_for_join(self, node: AVLNode):
+    def rebalace_for_join(self, node: AVLNode):
 		"""
 		Input:
 			self: AVLTree instance
@@ -484,7 +484,7 @@ class AVLTree(object):
 			Overall, the time complexity of join is O(log n).
 		"""
 
-  def join(self, tree2, key, val=""):
+    def join(self, tree2, key, val=""):
 		"""
 		Input:
 			The method receives tree2 whose keys are either smaller or larger, collectively, than
@@ -516,7 +516,7 @@ class AVLTree(object):
 			Overall, the time complexity of join is O(log n).
 		"""
 
-  ef split(self, node: AVLNode):
+    def split(self, node: AVLNode):
 		"""
 		Input:
 			'self' is the tree we traverse
@@ -545,7 +545,7 @@ class AVLTree(object):
 			Overall, the time complexity of join is O(log n).
 		"""
 
-  def avl_to_array(self):
+    def avl_to_array(self):
 		"""
 		Input:
 			'self' is the tree we traverse
@@ -557,7 +557,7 @@ class AVLTree(object):
 			O(n)
 		"""
   
-  def max_node(self):
+    def max_node(self):
 		"""
 		Input:
 			@type: AVLTree
@@ -571,7 +571,7 @@ class AVLTree(object):
 			O(1).
 		"""
 
-def size(self):
+    def size(self):
 		"""
 		Input:
 			@type: AVLTree
@@ -584,16 +584,17 @@ def size(self):
 		Time Complexity:
 			O(1).
 		"""
-def get_root(self):
-"""
-Input:
-	@type: AVLTree
-	'self' is the tree we traverse
-Output:
-	@type: AVLNode
-	The root of 'self'.
-Description:
-	returns the root of 'self'
-Time Complexity:
-	O(1).
-"""  
+    def get_root(self):
+        """
+        Input:
+            @type: AVLTree
+            'self' is the tree we traverse
+        Output:
+            @type: AVLNode
+            The root of 'self'.
+        Description:
+            returns the root of 'self'
+        Time Complexity:
+            O(1).
+        """  
+```
