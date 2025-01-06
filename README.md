@@ -584,16 +584,16 @@ def size(self):
 		Time Complexity:
 			O(1).
 		"""
-	def get_root(self):
-		"""
-		Input:
-			@type: AVLTree
-			'self' is the tree we traverse
-		Output:
-			@type: AVLNode
-			The root of 'self'.
-		Description:
-			returns the root of 'self'
-		Time Complexity:
-			O(1).
-		"""  
+def get_root(self):
+"""
+Input:
+	@type: AVLTree
+	'self' is the tree we traverse
+Output:
+	@type: AVLNode
+	The root of 'self'.
+Description:
+	returns the root of 'self'
+Time Complexity:
+	O(1).
+"""  
