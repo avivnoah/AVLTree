@@ -6,6 +6,7 @@ Implementing an AVL tree, a self-balancing binary search tree, using rotation me
 ![354635585-e3b975e9-d8ae-4f0a-911b-a26eb050e98b](https://github.com/user-attachments/assets/fb3ddbe0-2512-4aff-ba82-6f38c2a3b211)
 
 Methods:
+
 class Node:
     def __init__(self, key, value):
       """
